@@ -1,0 +1,69 @@
+============================================================
+DEV CHECK
+Node.js Project Diagnostic Engine
+
+Scanning: /Users/dheerajjadhav/Desktop/npm-package-demo
+============================================================
+
+Project: npm-package-demo v1.0.0
+
+Scripts (2):
+  - test: echo "Error: no test specified" && exit 1
+  - devcheck: devcheck .
+
+[PASS] Target directory exists and is readable
+[PASS] package.json is valid JSON
+[PASS] Valid package name: "npm-package-demo"
+[PASS] Valid semver version: "1.0.0"
+[PASS] package.json "description" provided
+[PASS] package.json "main" entry file exists: "src/index.js"
+[PASS] .gitignore found
+[PASS] Lock file found (package-lock.json)
+[PASS] Test directory found (tests)
+
+[WARNING] package.json
+        package.json "license" is missing or empty
+        Code: PKG_MISSING_LICENSE
+        Fix: Add a valid SPDX license identifier (e.g., "MIT", "Apache-2.0") to package.json.
+
+[WARNING] package.json:7:5
+        package.json "test" script contains default npm placeholder ("no test specified")
+        Code: PKG_PLACEHOLDER_TEST_SCRIPT
+        Fix: Replace default npm test placeholder with an active test command (e.g., "node --test").
+
+[WARNING] README.md
+        README.md is missing from project root
+        Code: MISSING_README
+        Fix: Create a README.md file documenting project usage and installation.
+
+[WARNING] LICENSE
+        LICENSE file is missing from project root
+        Code: MISSING_LICENSE
+        Fix: Include an open-source or proprietary LICENSE file in your repository.
+
+[ERROR] src/broken-fixture.js:5:19
+        JavaScript syntax error: Unexpected token ')'
+        Code: JS_SYNTAX_ERROR
+        Fix: Check the syntax near line 5.
+
+[ERROR] src/config.js:3:21
+        Potential AWS Access Key ID detected (heuristic)
+        Code: SECRET_EXPOSURE
+        Fix: Revoke this key and load credentials from environment variables or AWS IAM roles.
+
+JavaScript Files:
+  .js:    4
+  .cjs:   0
+  .mjs:   0
+  .jsx:   0
+  Total:  4
+
+------------------------------------------------------------
+PROJECT HEALTH: UNHEALTHY
+
+Files scanned: 11
+Files with issues: 5
+Errors: 2
+Warnings: 4
+Info: 0
+------------------------------------------------------------

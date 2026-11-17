@@ -1,0 +1,13 @@
+{
+  "name": "npm-package-demo",
+  "version": "1.0.0",
+  "description": "Live demonstration project consuming published devcheck-dj npm package",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devcheck": "devcheck ."
+  },
+  "dependencies": {
+    "devcheck-dj": "^1.1.0"
+  }
+}

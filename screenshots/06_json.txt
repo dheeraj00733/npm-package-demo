@@ -1,0 +1,147 @@
+{
+  "tool": "DevCheck",
+  "version": "1.1.0",
+  "target": "/Users/dheerajjadhav/Desktop/npm-package-demo",
+  "project": {
+    "name": "npm-package-demo",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "devcheck": "devcheck ."
+    }
+  },
+  "status": "UNHEALTHY",
+  "summary": {
+    "filesScanned": 12,
+    "filesWithIssues": 5,
+    "errors": 2,
+    "warnings": 4,
+    "info": 0,
+    "passed": 9,
+    "failed": 2
+  },
+  "diagnostics": [
+    {
+      "file": "package.json",
+      "line": null,
+      "column": null,
+      "severity": "WARNING",
+      "code": "PKG_MISSING_LICENSE",
+      "message": "package.json \"license\" is missing or empty",
+      "suggestion": "Add a valid SPDX license identifier (e.g., \"MIT\", \"Apache-2.0\") to package.json.",
+      "scanner": "package"
+    },
+    {
+      "file": "package.json",
+      "line": 7,
+      "column": 5,
+      "severity": "WARNING",
+      "code": "PKG_PLACEHOLDER_TEST_SCRIPT",
+      "message": "package.json \"test\" script contains default npm placeholder (\"no test specified\")",
+      "suggestion": "Replace default npm test placeholder with an active test command (e.g., \"node --test\").",
+      "scanner": "package"
+    },
+    {
+      "file": "README.md",
+      "line": null,
+      "column": null,
+      "severity": "WARNING",
+      "code": "MISSING_README",
+      "message": "README.md is missing from project root",
+      "suggestion": "Create a README.md file documenting project usage and installation.",
+      "scanner": "structure"
+    },
+    {
+      "file": "LICENSE",
+      "line": null,
+      "column": null,
+      "severity": "WARNING",
+      "code": "MISSING_LICENSE",
+      "message": "LICENSE file is missing from project root",
+      "suggestion": "Include an open-source or proprietary LICENSE file in your repository.",
+      "scanner": "structure"
+    },
+    {
+      "file": "src/broken-fixture.js",
+      "line": 5,
+      "column": 19,
+      "severity": "ERROR",
+      "code": "JS_SYNTAX_ERROR",
+      "message": "JavaScript syntax error: Unexpected token ')'",
+      "suggestion": "Check the syntax near line 5.",
+      "scanner": "syntax"
+    },
+    {
+      "file": "src/config.js",
+      "line": 3,
+      "column": 21,
+      "severity": "ERROR",
+      "code": "SECRET_EXPOSURE",
+      "message": "Potential AWS Access Key ID detected (heuristic)",
+      "suggestion": "Revoke this key and load credentials from environment variables or AWS IAM roles.",
+      "scanner": "security"
+    }
+  ],
+  "checks": [
+    {
+      "type": "PASS",
+      "message": "Target directory exists and is readable"
+    },
+    {
+      "type": "PASS",
+      "message": "package.json is valid JSON"
+    },
+    {
+      "type": "PASS",
+      "message": "Valid package name: \"npm-package-demo\""
+    },
+    {
+      "type": "PASS",
+      "message": "Valid semver version: \"1.0.0\""
+    },
+    {
+      "type": "PASS",
+      "message": "package.json \"description\" provided"
+    },
+    {
+      "type": "WARN",
+      "message": "package.json \"license\" is missing or empty"
+    },
+    {
+      "type": "PASS",
+      "message": "package.json \"main\" entry file exists: \"src/index.js\""
+    },
+    {
+      "type": "WARN",
+      "message": "package.json \"test\" script contains default npm placeholder (\"no test specified\")"
+    },
+    {
+      "type": "WARN",
+      "message": "README.md is missing"
+    },
+    {
+      "type": "PASS",
+      "message": ".gitignore found"
+    },
+    {
+      "type": "WARN",
+      "message": "LICENSE file is missing"
+    },
+    {
+      "type": "PASS",
+      "message": "Lock file found (package-lock.json)"
+    },
+    {
+      "type": "PASS",
+      "message": "Test directory found (tests)"
+    }
+  ],
+  "jsFiles": {
+    "js": 4,
+    "cjs": 0,
+    "mjs": 0,
+    "jsx": 0,
+    "total": 4
+  },
+  "exitCode": 1
+}

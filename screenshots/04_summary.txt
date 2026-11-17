@@ -1,0 +1,16 @@
+============================================================
+DEV CHECK
+Node.js Project Diagnostic Engine
+
+Scanning: /Users/dheerajjadhav/Desktop/npm-package-demo
+============================================================
+
+------------------------------------------------------------
+PROJECT HEALTH: UNHEALTHY
+
+Files scanned: 10
+Files with issues: 5
+Errors: 2
+Warnings: 4
+Info: 0
+------------------------------------------------------------
